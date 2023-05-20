@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Patient Medical Record </title>
+    <link rel="stylesheet" href="../css/patientRecordstyles.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+        
+    <nav class="sidebar">
+        <div class="logocircle">
+            <img src="../assests/healthLogoCircle.png">
+        </div>
+      <a href="../html/home.html" class="logo">Electronic Medical Record</a>
+
+      <div class="menu-content">
+        <ul class="menu-items">
+          <div class="menu-title">Dash board</div>
+
+          <li class="item">
+            <a href="../html/patientRecord.html">Patient Medical Records</a>
+          </li>
+
+          <li class="item">
+            <div class="submenu-item">
+              <span>Add record</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Add record
+              </div>
+              <li class="item">
+                <a href="../html/infant.html"> Infant patient</a>
+              </li>
+              <li class="item">
+                <a href="#"> Adult patient</a>
+              </li>
+              <li class="item">
+                <a href="#"> Elderly patient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Staff & Admin</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Staff & Admin
+              </div>
+              <li class="item">
+                <a href="#">Thomas Eureek Palero</a>
+              </li>
+              <li class="item">
+                <a href="#">Albert Gandoli</a>
+              </li>
+              <li class="item">
+                <a href="#">Kerwin Jhon Mayuga</a>
+              </li>
+              <li class="item">
+                <a href="#">Jayson Marinas</a>
+              </li>
+              <li class="item">
+                <a href="#">Gabriel DeGuzman</a>
+              </li>
+              <li class="item">
+                <a href="#">Joan Pauline Lopez</a>
+              </li>
+              <li class="item">
+                <a href="#">Analyn Morano</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item">
+            <a href="../html/doctorsInfo.html">Doctors Information</a>
+          </li>
+
+          <li class="item">
+            <a href="#">User Log</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+     
+    <nav class="navbar">
+        <i class="fa-solid fa-bars" id="sidebar-close"></i>
+      </nav>
+    
+      <main class="main">
+        <h1>Record Information</h1>
+  
+  <form id="searchForm">
+    <label for="familyNoInput">Family No.:</label>
+    <input type="text" id="familyNoInput" name="familyNoInput">
+    <button type="button" onclick="searchRecord()">Search</button>
+  </form>
+
+  <h2>NAME</h2>
+  <p>
+    Surname: <span id="surname"></span><br>
+    Lastname: <span id="lastname"></span><br>
+    Middle Name: <span id="middleName"></span>
+  </p>
+
+  <h2>Other info details</h2>
+  <p>
+    Family No.: <span id="familyNo"></span><br>
+    Date of Birth: <span id="dateOfBirth"></span><br>
+    Place of Birth: <span id="placeOfBirth"></span><br>
+    Address: <span id="address"></span><br>
+    Mother's Name: <span id="motherName"></span><br>
+    Father's Name: <span id="fatherName"></span><br>
+    Birth Weight: <span id="birthWeight"></span><br>
+    Birth Height: <span id="birthHeight"></span><br>
+    Sex: <span id="sex"></span>
+  </p>
+
+      </main>
+      <script>
+        function searchRecord() {
+          var familyNo = document.getElementById("familyNoInput").value;
+    
+          // Perform a search or fetch the data based on the family number
+          
+          // Assuming you have the data, fill in the details below
+          var surname = "Smith";
+          var lastname = "Johnson";
+          var middleName = "Michael";
+          var dateOfBirth = "2005-07-15";
+          var placeOfBirth = "New York";
+          var address = "123 Main Street";
+          var motherName = "Sarah";
+          var fatherName = "John";
+          var birthWeight = "3.5 kg";
+          var birthHeight = "50 cm";
+          var sex = "Female";
+    
+          document.getElementById("familyNo").textContent = familyNo;
+          document.getElementById("surname").textContent = surname;
+          document.getElementById("lastname").textContent = lastname;
+          document.getElementById("middleName").textContent = middleName;
+          document.getElementById("dateOfBirth").textContent = dateOfBirth;
+          document.getElementById("placeOfBirth").textContent = placeOfBirth;
+          document.getElementById("address").textContent = address;
+          document.getElementById("motherName").textContent = motherName;
+          document.getElementById("fatherName").textContent = fatherName;
+          document.getElementById("birthWeight").textContent = birthWeight;
+          document.getElementById("birthHeight").textContent = birthHeight;
+          document.getElementById("sex").textContent = sex;
+        }
+      </script>
+    <script src="../js/homescript.js"></script>
+
+  </body>
+</html>
+
+

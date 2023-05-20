@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vaccine Table Form</title>
+  <script>
+    function submitForm() {
+      // Get the form values
+      var table = document.getElementById("vaccineTable");
+      var vaccineName = document.getElementById("vaccineName").value;
+      var doses = document.getElementById("doses").value;
+      var dateOfVaccination = document.getElementById("dateOfVaccination").value;
+      var supplementalActivity = document.getElementById("supplementalActivity").value;
+      var remarks = document.getElementById("remarks").value;
+
+      // Create a new row in the table
+      var newRow = table.insertRow(table.rows.length);
+      
+      // Insert cells with the form values
+      var cell1 = newRow.insertCell(0);
+      cell1.innerHTML = vaccineName;
+
+      var cell2 = newRow.insertCell(1);
+      cell2.innerHTML = doses;
+
+      var cell3 = newRow.insertCell(2);
+      cell3.innerHTML = dateOfVaccination;
+
+      var cell4 = newRow.insertCell(3);
+      cell4.innerHTML = supplementalActivity;
+
+      var cell5 = newRow.insertCell(4);
+      cell5.innerHTML = remarks;
+
+      // Reset the form fields
+      document.getElementById("vaccineName").value = "";
+      document.getElementById("doses").value = "";
+      document.getElementById("dateOfVaccination").value = "";
+      document.getElementById("supplementalActivity").value = "";
+      document.getElementById("remarks").value = "";
+    }
+  </script>
+</head>
+<body>
+  <h2>Vaccine Table Form</h2>
+  <form onsubmit="event.preventDefault(); submitForm();">
+    <label for="vaccineName">Vaccine Name:</label>
+    <input type="text" id="vaccineName" name="vaccineName" required>
+
+    <label for="doses">Doses:</label>
+    <input type="number" id="doses" name="doses" required>
+
+    <label for="dateOfVaccination">Date of Vaccination:</label>
+    <input type="date" id="dateOfVaccination" name="dateOfVaccination" required>
+
+    <label for="supplementalActivity">Supplemental Immunization Activity:</label>
+    <input type="text" id="supplementalActivity" name="supplementalActivity" required>
+
+    <label for="remarks">Remarks:</label>
+    <input type="text" id="remarks" name="remarks" required>
+
+    <button type="submit">Add to Table</button>
+  </form>
+
+  <table id="vaccineTable">
+    <thead>
+      <tr>
+        <th>Vaccine</th>
+        <th>Doses</th>
+        <th>Date of Vaccination</th>
+        <th>Supplemental Immunization Activity</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Existing table rows will be dynamically added here -->
+    </tbody>
+  </table>
+</body>
+</html>

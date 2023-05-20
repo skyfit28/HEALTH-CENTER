@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Add Record </title>
+    <link rel="stylesheet" href="../css/infantstyles.css" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  </head>
+  <body>
+        
+    <nav class="sidebar">
+        <div class="logocircle">
+            <img src="../assests/healthLogoCircle.png">
+        </div>
+      <a href="../html/home.html" class="logo">Electronic Medical Record</a>
+
+      <div class="menu-content">
+        <ul class="menu-items">
+          <div class="menu-title">Dash board</div>
+
+          <li class="item">
+            <a href="../html/patientRecord.html">Patient Medical Records</a>
+          </li>
+
+          <li class="item">
+            <div class="submenu-item">
+              <span>Add record</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Add record
+              </div>
+              <li class="item">
+                <a href="../html/infant.html"> Infant patient</a>
+              </li>
+              <li class="item">
+                <a href="#"> Adult patient</a>
+              </li>
+              <li class="item">
+                <a href="#"> Elderly patient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="submenu-item">
+              <span>Staff & Admin</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <ul class="menu-items submenu">
+              <div class="menu-title">
+                <i class="fa-solid fa-chevron-left"></i>
+                Staff & Admin
+              </div>
+              <li class="item">
+                <a href="#">Thomas Eureek Palero</a>
+              </li>
+              <li class="item">
+                <a href="#">Albert Gandoli</a>
+              </li>
+              <li class="item">
+                <a href="#">Kerwin Jhon Mayuga</a>
+              </li>
+              <li class="item">
+                <a href="#">Jayson Marinas</a>
+              </li>
+              <li class="item">
+                <a href="#">Gabriel DeGuzman</a>
+              </li>
+              <li class="item">
+                <a href="#">Joan Pauline Lopez</a>
+              </li>
+              <li class="item">
+                <a href="#">Analyn Morano</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="item">
+            <a href="../html/doctorsInfo.html">Doctors Information</a>
+          </li>
+
+          <li class="item">
+            <a href="#">User Log</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="navbar">
+        <i class="fa-solid fa-bars" id="sidebar-close"></i>
+      </nav>
+   
+      <main class="main">
+        <div class="center">
+            <h1> Infant Patient </h1>
+            <form id="infantForm">
+              <label for="childName">Child's Name:</label>
+              <input type="text" id="childName" name="childName" required>
+          
+              <label for="dateOfBirth">Date of Birth:</label>
+              <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+
+              <label for="placeOfBirth">Place of Birth:</label>
+              <input type="text" id="placeOfBirth" name="placeOfBirth" required>
+          
+              <label for="address">Address:</label>
+              <textarea id="address" name="address" rows="4" required></textarea>
+          
+              <label for="mothersName">Mother's Name:</label>
+              <input type="text" id="mothersName" name="mothersName" required>
+          
+              <label for="fathersName">Father's Name:</label>
+              <input type="text" id="fathersName" name="fathersName" required>
+          
+              <label for="birthWeight">Birth Weight:</label>
+              <input type="text" id="birthWeight" name="birthWeight" required>
+          
+              <label for="birthHeight">Birth Height:</label>
+              <input type="text" id="birthHeight" name="birthHeight" required>
+          
+              <label for="sex">Sex:</label>
+              <input type="text" id="sex" name="sex" required>
+
+              <a href="../html/vaccine.html">
+                <button type="submit">Next</button>
+              </a>    
+
+            </form>
+        </div>
+      </main>
+      <script>
+        document.getElementById('infantForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Redirect to the next page
+         window.location.href = '../html/vaccine.html';
+       });
+      </script>
+
+    <script src="../js/homescript.js"></script>
+
+  </body>
+</html>
+
+
